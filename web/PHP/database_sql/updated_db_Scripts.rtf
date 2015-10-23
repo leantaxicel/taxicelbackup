@@ -1,0 +1,236 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fnil\fcharset0 Verdana;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red217\green11\blue0;\red133\green0\blue135;\red223\green223\blue223;
+\red28\green71\blue110;\red52\green52\blue52;\red15\green112\blue1;\red253\green134\blue8;\red251\green0\blue255;
+\red14\green110\blue109;\red36\green43\blue51;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs22 \cf2 \expnd0\expndtw0\kerning0
+todate (14-05-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+ALTER TABLE `tc_countries`  ADD `countrycode` VARCHAR(10) NOT NULL ;\
+UPDATE `taxi_cel`.`tc_countries` SET `countrycode` = 'ar' WHERE `tc_countries`.`id` = 1;\
+ALTER TABLE `tc_countries`  ADD `dialingcode` VARCHAR(10) NOT NULL ;\
+\
+UPDATE `taxi_cel`.`tc_countries` SET `dialingcode` = '+54' WHERE `tc_countries`.`id` = 1;\
+\
+ALTER TABLE `tc_cities`  ADD `ispricesetting` INT(1) NOT NULL DEFAULT '0' ;\
+\
+ALTER TABLE `tc_cities` CHANGE `is_active` `is_active` INT(11) NOT NULL COMMENT '1=active, 0=not active';\
+\
+//update in to the server on 22-05-15 \
+\
+today(16-05-15) :\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\
+ALTER TABLE `tc_payment_settings` DROP `payflow_username`, DROP `payflow_partner`, DROP `payflow_vendor`, DROP `payflow_password`;\
+\
+ALTER TABLE `tc_payment_settings`  ADD `wait_time_charge` DOUBLE NOT NULL ;\
+\
+ALTER TABLE `tc_payment_settings`  ADD `referal_percentage` DOUBLE NOT NULL ;\
+\
+\
+ALTER TABLE `tc_configurations`  ADD `payflow_username` VARCHAR(250) NOT NULL ,  ADD `payflow_partner` VARCHAR(250) NOT NULL ,  ADD `payflow_vendor` VARCHAR(250) NOT NULL ,  ADD `payflow_password` VARCHAR(250) NOT NULL ;\
+\
+ALTER TABLE `tc_configurations`  ADD `initial_earning` DOUBLE NOT NULL ;\
+\
+// uploaded in to the server on 22-05-15\
+\
+today (18-05-15) :\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+ALTER TABLE `tc_users`  ADD `passretrivestr` VARCHAR(250) NOT NULL ; // uploaded into the server\
+\
+today(19-05-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+ALTER TABLE `tc_configurations`  ADD `fromemail` VARCHAR(250) NOT NULL COMMENT 'email send using this email id' ,  ADD `toemail` VARCHAR(250) NOT NULL COMMENT 'received email in this id' ,  ADD `reclimit` INT(4) UNSIGNED NOT NULL COMMENT 'result limit' ;\
+// uploaded into the server on 22-05-15\
+\
+today(21-05-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\
+ALTER TABLE `tc_user_credit_details` CHANGE `is_active` `is_active` INT(20) NOT NULL DEFAULT '1' COMMENT '0=not active, 1=active';\
+\
+ALTER TABLE `tc_price_settings`  ADD `additional_wait_time` DOUBLE NOT NULL ,  ADD `additional_wait_amount` DOUBLE NOT NULL ;\
+//uploaded into the server on 22-05-15\
+\
+today(22-05-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\
+ALTER TABLE `tc_rides`  ADD `ordercreatetime` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ;\
+\
+ALTER TABLE `tc_rides` CHANGE `status` `status` INT(20) NOT NULL COMMENT '1=RideAccepted, 2=DriverArriving, 3=TripStarted, 4=TripEnds, 5=cancel ';\
+\
+ALTER TABLE `tc_rides`  ADD `transaction_id` INT(10) UNSIGNED NOT NULL DEFAULT '0' ;\
+\
+ALTER TABLE `tc_driver_documents` CHANGE `filename_oper` `filename_oper` VARCHAR(200) NOT NULL COMMENT 'vehicle_operator';\
+\
+ALTER TABLE `tc_rides`  ADD `driverviewoff` INT(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '1=driver remove from list' ,  ADD `userviewoff` INT(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'customer remove from list' ;\
+\
+ALTER TABLE `tc_configurations`  ADD `driverfindrange` DOUBLE NOT NULL ;\
+\
+//uploaded into the server\
+\
+today(23-05-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\
+ALTER TABLE `tc_rides`  ADD `vehicleinfo` VARCHAR(250) NOT NULL COMMENT 'vehicle details by which the ride completed' ;\
+\
+// uploaded into the server\
+\
+today(25-05-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\
+ALTER TABLE `tc_rides`  ADD `comision_per` DOUBLE NOT NULL COMMENT 'how much taxicel commition apply' ,  ADD `refferal_per` DOUBLE NOT NULL COMMENT 'how much refferal charge apply' ;\
+\
+\
+ALTER TABLE `tc_commission_payments`  ADD `scheme_id` INT(10) UNSIGNED NOT NULL COMMENT 'recharge scheme id if payment type =1\'92  AFTER `user_id`;\
+\
+ALTER TABLE `tc_rides`  ADD `paymentdone` INT(1) NOT NULL DEFAULT '0' COMMENT 'ride payment done successfully' ;\
+//uploaded into the server\
+\
+today(28-05-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+ALTER TABLE `tc_vehicle_details`  ADD `isdefault` INT(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '1=default vihicle' ,  ADD `isapproved` INT(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '1=aprroved by admin' ;\
+\
+//uploaded into the server\
+\
+today(29-05-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+ALTER TABLE `tc_car_models`  ADD `car_id` INT(11) NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_vehicle_details`  ADD `car_model_id` INT(11) UNSIGNED NOT NULL  AFTER `car_id`;\
+\
+ALTER TABLE `tc_driver_customs`  ADD `vehicle_detail_id` INT(11) UNSIGNED NOT NULL  AFTER `drive_city`;\
+\
+//uploaded into the server\
+\
+today(04-06-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "https://taxicel.com.ar:2083/cpsess8800985905/3rdparty/phpMyAdmin/url.php?url=http%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.5%2Fen%2Falter-table.html&token=209d3587b53994e49602e7792046b321"}}{\fldrslt 
+\f1\b\fs28 \cf3 \cb4 \expnd0\expndtw0\kerning0
+ALTER
+\b0 \cf5 \expnd0\expndtw0\kerning0
+ 
+\b \cf3 \expnd0\expndtw0\kerning0
+TABLE}}
+\f1\fs28 \cf6 \cb4 \expnd0\expndtw0\kerning0
+ \cf7 \expnd0\expndtw0\kerning0
+`tc_rides`\cf6 \expnd0\expndtw0\kerning0
+ 
+\b \cf3 \expnd0\expndtw0\kerning0
+ADD
+\b0 \cf6 \expnd0\expndtw0\kerning0
+ \cf7 \expnd0\expndtw0\kerning0
+`cancelreason`\cf6 \expnd0\expndtw0\kerning0
+ \cf8 \expnd0\expndtw0\kerning0
+VARCHAR\cf9 \expnd0\expndtw0\kerning0
+(\cf6 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+256\cf6 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+)\cf6 \expnd0\expndtw0\kerning0
+ {\field{\*\fldinst{HYPERLINK "https://taxicel.com.ar:2083/cpsess8800985905/3rdparty/phpMyAdmin/url.php?url=http%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.5%2Fen%2Flogical-operators.html%23operator_not&token=209d3587b53994e49602e7792046b321"}}{\fldrslt 
+\b \cf3 \expnd0\expndtw0\kerning0
+NOT}} 
+\b \cf3 \expnd0\expndtw0\kerning0
+NULL
+\b0 \cf6 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+;\
+\pard\pardeftab720
+
+\f0\fs22 \cf2 \cb1 \expnd0\expndtw0\kerning0
+// uploaded into the server
+\f2 \cf11 \expnd0\expndtw0\kerning0
+\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+today(27-06-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+ALTER TABLE `tc_user_ride_commitions`  ADD `credit_debit` INT(1) UNSIGNED NOT NULL COMMENT '1=credit , 2=debit' ,  ADD `reccomment` VARCHAR(256) NOT NULL ;\
+\
+//uploaded into the server\
+\
+====================\
+today(29-06-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\
+ALTER TABLE `tc_rides`  ADD `admin_commision` DOUBLE NOT NULL ,  ADD `is_admin_referral` INT(1) NOT NULL DEFAULT '0' ,  ADD `drivercommision` DOUBLE NOT NULL ;\
+\
+//uploaded into the server\
+========================\
+today(30-06-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+CREATE TABLE IF NOT EXISTS `tc_driver_commision_distributions` (\
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\
+  `min_range` int(10) unsigned NOT NULL COMMENT 'minimum number of referred',\
+  `max_range` int(10) unsigned NOT NULL COMMENT 'maximum nunber of referraed',\
+  `commision_per` double unsigned NOT NULL COMMENT 'how much commision get',\
+  `is_active` int(1) unsigned NOT NULL DEFAULT '1',\
+  `is_deleted` int(1) unsigned NOT NULL DEFAULT '0',\
+  PRIMARY KEY (`id`)\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;\
+\
+ALTER TABLE `tc_user_ride_commitions`  ADD `commisionper` DOUBLE NOT NULL ;\
+\
+ALTER TABLE `tc_user_ride_commitions`  ADD `earn_in_driver_chain` INT(1) NOT NULL DEFAULT '0' COMMENT '1=yes from driver chain' ;\
+\
+//uploaded in the server\
+\
+============================================\
+company module added in \
+\
+today(03-07-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\
+ALTER TABLE `tc_users`  ADD `company_id` INT(11) UNSIGNED NOT NULL COMMENT 'user belongs to which company' ;\
+\
+ALTER TABLE `tc_companies`  ADD `create_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ;\
+\
+ALTER TABLE `tc_companies`  ADD `is_active` INT(1) UNSIGNED NOT NULL DEFAULT '0'  AFTER `details`,  ADD `is_deleted` INT(1) UNSIGNED NOT NULL DEFAULT '0'  AFTER `is_active`;\
+\
+today(04-07-15):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+ALTER TABLE `tc_rides`  ADD `company_id` INT(11) UNSIGNED NOT NULL ;\
+\
+ALTER TABLE `tc_cities`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_heat_zones`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_app_galleries`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_users`  ADD `is_super_admin` INT(1) UNSIGNED NOT NULL DEFAULT '0' ;\
+\
+ALTER TABLE `tc_commission_payments`  ADD `points` INT(22) NOT NULL AFTER `paying_cost`;\
+\
+today(06-07-2015):\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+ALTER TABLE `tc_cars`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_car_models`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_vehicle_details`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_price_settings`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_price_settings` CHANGE `base_distance` `base_distance` DOUBLE NOT NULL COMMENT 'in Km unit';\
+\
+ALTER TABLE `tc_configurations`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_payment_settings`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`,  ADD `customer_referral_per` DOUBLE NOT NULL  AFTER `company_id`;\
+\
+ALTER TABLE `tc_recharge_schemes`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_driver_commision_distributions`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_user_ride_ratings`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_commission_payments`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;\
+\
+ALTER TABLE `tc_commission_payments`  ADD `transection_id` BIGINT(11) UNSIGNED NOT NULL ;\
+\
+ALTER TABLE `tc_users`  ADD `is_active` INT(1) UNSIGNED NOT NULL ;\
+ALTER TABLE `tc_users` CHANGE `is_active` `is_active` INT(1) UNSIGNED NOT NULL DEFAULT '1';\
+\
+ALTER TABLE `tc_commission_payments`  ADD `is_admin_give` INT(1) UNSIGNED NOT NULL DEFAULT '0'  AFTER `transection_id`;\
+\
+//uper all uploaded in developer section on 08-07-15\
+\
+ALTER TABLE `tc_contactus`  ADD `company_id` INT(11) UNSIGNED NOT NULL  AFTER `id`;}

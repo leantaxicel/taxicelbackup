@@ -1,0 +1,585 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+*  {  padding: 0 ;  margin: 0 ; }
+
+body{
+	font-family: 'Roboto', sans-serif;
+} 
+
+td, div, h1, h2, h3, p, input, form{
+	font-size:16px;
+}
+
+a  {
+	text-decoration: none ;	
+}
+
+img{
+	border:none;
+}
+ul{ 
+	list-style:none;
+}
+
+.clr  {
+	clear: both ;	
+}
+
+
+/*-----------------------------login-----------------------------*/
+
+	.mainWrapper{
+		width:100%;
+		height:auto;
+	}
+		.loginPage{
+				position:absolute;
+		}
+			.loginPage img{
+				margin:40px 0 0 50px;
+			}
+			.loginPage h1{
+				padding: 30px 40px;
+				font-size:24px;
+				color:#fff;
+				font-weight:normal;
+			}
+			.login{
+				width: 370px;
+				height: 220px;
+				padding: 45px 40px;
+				margin: 5% 100%;
+				background:#fef4d6;
+				box-shadow:0 2px 15px rgba(0, 0, 0, .75);
+			}
+				.login h2{
+					font-size:24px;
+					color:#2f2c2a;
+					font-weight:300;
+					border-bottom:1px dashed #e8c760;
+					padding:0 0 6px 0;
+					margin:0 0 20px 0;
+				}
+				.login h2 a{
+					font-size:16px;
+					color:#323232;
+					float: right;
+					margin: 5px 0 0 0;
+					transition:all 0.4s ease;
+				}
+				.login h2 a:hover{
+					color:#CA9A00;
+				}
+				.loginImput{
+					background:#fff;
+					border: 1px solid #e8c760;
+					border-radius:2px;
+					height:38px;
+					padding:0 15px;
+					width: 91%;
+					margin: 0 0 18px 0;
+				}
+				
+				.checkBtn{
+					color: #323232;
+				}
+				.check{
+					margin: 10px 0 0 0;
+				}
+				.loginButton{
+					background:#ffcc29;
+					padding:10px 20px;
+					font-size:18px;
+					border:none;
+					border-radius:2px;
+					transition:all 0.4s ease;
+					color:#000;
+					cursor:pointer;
+					float: right;
+					font-weight:300;
+					font-family: 'Roboto', sans-serif;
+				}
+				.loginButton:hover{
+					background:#000;
+					color:#fff;
+				}
+				
+		.bg{
+			width: 100%;
+			height: 100%;
+		}
+
+/*-----------------------------dashboard-----------------------------*/
+
+	.header{
+		box-shadow:0 2px 7px rgba(0, 0, 0, 0.3);
+		background:#fef4d6;
+		padding:15px 0;
+		width: 100%;
+		position: relative;
+	}
+		.header img{
+			float:left;
+			margin: 0 0 0 40px;
+		}
+		.afterLogin{
+			float:right;
+			margin: 12px 40px 0 0;
+			width: 350px;
+		}
+			.afterLogin p{
+				float:left;
+				color:#00b200;
+				font-size:18px;
+				padding:10px 20px 0 0;
+				font-weight:300;
+			}
+			.afterLogin p span{
+				color:#474747;
+				font-weight:300;
+			}
+			.afterLogin img{
+				float:left;
+				border-right:1px solid #b8b8b8;
+				padding:0 20px 0 0;
+				margin: 0;
+			}
+			.afterLogin h4{
+				font-weight:300;
+				font-size:18px;
+				float:left;
+				padding:10px 0 0 20px;
+			}
+			.afterLogin h4 a{
+				color:#e80000;
+				transition:all 0.4s ease;
+			}
+			.afterLogin h4 a:hover{
+				color:#FF5F5F;
+			}
+	
+	.mainBody{
+	}
+		.icopPart{
+			width: 1025px;
+			margin: 5% auto;
+		}
+			.icopPart ul{
+			}
+			.icopPart ul li{
+				float:left;
+				margin: 20px 45px;
+			}
+			
+			.contactinfo{
+				background:url(../img/contact_info.png) no-repeat 0 0;
+				display:block;
+				width:108px;
+				height:108px;
+				transition:all 0.4s ease;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+			}
+			.contactinfo:hover{
+				background:url(../img/contact_info_h.png) no-repeat 0 0;
+			}
+			
+			.banking{
+				background:url(../img/banking.png) no-repeat 0 0;
+				display:block;
+				width:108px;
+				height:108px;
+				transition:all 0.4s ease;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+			}
+			.banking:hover{
+				background:url(../img/banking_h.png) no-repeat 0 0;
+			}
+			
+			.documents{
+				background:url(../img/documents.png) no-repeat 0 0;
+				display:block;
+				width:108px;
+				height:108px;
+				transition:all 0.4s ease;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+			}
+			.documents:hover{
+				background:url(../img/documents_h.png) no-repeat 0 0;
+			}
+			
+			.vehicles{
+				background:url(../img/vehicles.png) no-repeat 0 0;
+				display:block;
+				width:108px;
+				height:108px;
+				transition:all 0.4s ease;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+			}
+			.vehicles:hover{
+				background:url(../img/vehicles_h.png) no-repeat 0 0;
+			}
+			
+			.partnerinovoice{
+				background:url(../img/partners_invoices.png) no-repeat 0 0;
+				display:block;
+				width:108px;
+				height:108px;
+				transition:all 0.4s ease;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+			}
+			.partnerinovoice:hover{
+				background:url(../img/partners_invoices_h.png) no-repeat 0 0;
+			}
+			
+			.tripinovoice{
+				background:url(../img/trip_invoices.png) no-repeat 0 0;
+				display:block;
+				width:108px;
+				height:108px;
+				transition:all 0.4s ease;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+			}
+			.tripinovoice:hover{
+				background:url(../img/trip_invoices_h.png) no-repeat 0 0;
+			}
+			
+			.drivers{
+				background:url(../img/drivers.png) no-repeat 0 0;
+				display:block;
+				width:108px;
+				height:108px;
+				transition:all 0.4s ease;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+			}
+			.drivers:hover{
+				background:url(../img/drivers_h.png) no-repeat 0 0;
+			}
+			
+			.livestatus{
+				background:url(../img/live_status.png) no-repeat 0 0;
+				display:block;
+				width:108px;
+				height:108px;
+				transition:all 0.4s ease;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+			}
+			.livestatus:hover{
+				background:url(../img/live_status_h.png) no-repeat 0 0;
+			}
+			
+			.supportandfaq{
+				background:url(../img/support_&_faq.png) no-repeat 0 0;
+				display:block;
+				width:108px;
+				height:108px;
+				transition:all 0.4s ease;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+			}
+			.supportandfaq:hover{
+				background:url(../img/support_&_faq_h.png) no-repeat 0 0;
+			}
+			
+			
+			/*.icopPart ul li img{
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+				margin: 0 auto;
+				display: block;
+			}*/
+			.icopPart ul li p{
+				font-size:20px;
+				color:#666666;
+				font-weight:300;
+				padding:6px 0 0 0;
+				text-align:center;
+			}
+	
+	.footer{
+		background:#494949;
+		position: absolute;
+		bottom: 0;
+		width:100%;
+	}
+		.footer p{
+			color:#e4ba3e;
+			font-size:16px;
+			font-weight:300;
+			padding:12px 40px;
+		}
+		.footer a{
+			color:#fde9ac;
+			transition:all 0.4s ease;
+			font-weight:300;
+		}
+		.footer a:hover{
+			color:#e4ba3e;
+		}
+
+/*-----------------------------add_page-----------------------------*/
+
+	.bodyMain{
+	}
+	
+		.navgaton{
+			float:left;
+			width:20%;
+			background: #F8F8F8;
+			height: 545px;
+		}
+			.navgaton ul{
+				padding:60px 0 0 40px;
+			}
+			.navgaton ul li{
+				padding:5px 0;
+			}
+			.navgaton ul li a{
+				font-size:20px;
+				color:#866700;
+				font-weight:300;
+				transition:all 0.4s ease;
+			}
+			.navgaton ul li a:hover{
+				color:#000;
+			}
+			.navgaton ul li a.active{
+				color:#000;
+			}
+		
+		.creatTol{
+			float:left;
+			width:77%;
+			margin:0 0 0 40px;
+		}
+			.creatTol h2{
+				color:#333333;
+				font-size:36px;
+				border-bottom:1px solid #E7E7E7;
+				font-weight: 300;
+				margin: 30px 0;
+				padding:0 0 5px 0;
+			}
+			.detailsImput{
+				background: #fff;
+				border: 1px solid #e8c760;
+				border-radius: 2px;
+				height: 48px;
+				padding: 0 15px;
+				width: 40%;
+				margin: 0 0 20px 0;
+				display: block;
+			}
+			
+			.detailsAdd{
+				background:#f2f2f2;
+				margin: 0 30px 0 0;
+			}
+				.detailsAdd h4{
+					color:#4a4a4a;
+					font-size:20px;
+					padding:10px 20px;
+					font-weight:normal;
+				}
+				
+				.dtlsEdit{
+					background:#f7eace;
+					padding: 0 0 0 20px;
+					margin:0 0 15px 0;
+				}
+					.dtlsEdit p{
+						float:left;
+						padding: 20px 20px 20px 25px;
+						font-size:20px;
+						background:url(../img/round.png) no-repeat 0 26px;
+					}
+					.dtlsEdit p span{
+						font-size:16px;
+						color:#8a8989;
+						display:block;
+					}
+					.dtlsEdit img{
+						float:right;
+						margin: 40px 20px 0 0;
+					}
+					
+				.detailsBtn{
+					background: #ffcc29;
+					color:#000;
+					font-size:20px;
+					font-weight:300;
+					border:none;
+					padding:16px 35px;
+					transition:all 0.4s ease;
+					cursor:pointer;
+					font-family: 'Roboto', sans-serif;
+				}
+				.detailsBtn:hover{
+					background:#000;
+					color:#fff;
+				}
+		
+		.all{
+			float:left;
+			background:#fbfbfb;
+			width:42%;
+			margin-top:5px;
+			padding: 0 0 10px 0;
+		}
+			.all h2{
+				color:#6d6c6c;
+				font-size:36px;
+				border-bottom:1px solid #b8b8b8;
+				font-weight: normal;
+				margin: 15px 0 20px 30px;
+			}
+			.dtlsEdit01{
+				border-radius: 5px;
+				margin: 0 30px 15px 30px ;
+			}
+				.dtlsEdit01 img{
+					margin: 28px 15px 0 0;
+				}
+
+/*----------------------------Teacher-------------------------------------*/
+
+.teacher{
+	width:79%;
+	float:left;
+	margin:0 0 0 30px;
+}
+.teacher h1{
+	color:#333333;
+	font-size:36px;
+	border-bottom:1px solid #b8b8b8;
+	font-weight:300;
+	padding:0 0 20px 0;
+	margin: 20px 0 0 0;
+	font-family:Roboto;
+}
+.allText{
+	background:#FFFAEA;
+	padding: 5px 20px;
+	margin:0 0 5px 0;
+	transition:all 0.4s ease;
+}
+.allText:hover{
+	background:#FDF3D4;
+}
+.text1{
+	float:left;
+	width:80%;
+	border-right:1px solid #F5D9A0;
+}
+.text1 h2{
+	font-size:24px;
+	text-align:left;
+	color:#333333;
+	font-weight:300;
+	margin: 0;
+	padding: 0;
+	border: none;
+	line-height: 24px;
+}
+.text1 p{
+	font-size:16px;
+	text-align:left;
+	color:#5e5e5e;
+	padding:5px 0 0 0;
+	font-weight:300;
+}
+.text2{
+	float:right;
+	width:17%;
+}
+.text2 ul{
+}
+.text2 ul li{
+	float:left;
+}
+.text2 ul li a{
+	padding:24px 15px;
+	display: block;
+}
+	.allTeacher{
+		height:423px;
+		overflow:hidden;
+		overflow-y:scroll;
+		margin: -30px 0 0 0;
+	}
+	.subTeacher{
+		height:1500px;
+	}
+
+/*--------------------------------Teacher_view----------------------------------*/
+
+.teacher_view{
+	width:79%;
+	float:left;
+	margin:0 0 0 30px;
+}
+.teacher_view h1{
+	color:#333333;
+	font-size:36px;
+	border-bottom:1px solid #b8b8b8;
+	font-weight:300;
+	padding:0 0 20px 0;
+	margin: 20px 0 0 0;
+	font-family:Roboto;
+}
+.techerTable table{
+}
+.techerTable table tr{
+}
+.techerTable table tr td{
+	padding: 0 90px 10px 0;
+	font-size:16px;
+	font-weight:300;
+	color:#333333;
+}
+.faqTotelTab{
+	margin:20px 0 0 0;
+	width: 97%;
+}
+.faqTotelTab h1{
+	color:#333333;
+	font-size:24px;
+	border-top:1px solid #b8b8b8;
+	border-bottom:none !important;
+	font-weight:300;
+	padding:10px 0;
+	margin: 10px 0 0 0;
+	font-family:Roboto;
+	
+}
+.faqTab{
+	padding:10px 20px;
+	background:#f7eace;
+	margin:10px 0 0 0;
+}
+.faqTab p{
+	float:left;
+	font-size:16px;
+	color:#333333;
+	font-weight:100;
+	text-transform:none;
+}
+.minassbutton{
+	float:right;
+}
+.faqTab2{
+	padding:10px 30px;
+	background:#f4f2f2;
+}
+
+
+
